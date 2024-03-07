@@ -12,7 +12,7 @@ services:
       - "--daemon-rpc-addr"
       - "bitcoin:18443"
       - "--cookie"
-      - "bitcoin:testpassword"
+      - "bitcoin:testpassword" # Just for testing, never add a real password here
       - "-v"
       - "-v"
       - "-v"
