@@ -10,7 +10,7 @@ services:
       - "--http-addr"
       - "0.0.0.0:3001"
       - "--daemon-rpc-addr"
-      - "bitcoin:18332"
+      - "bitcoin:18333"
       - "--cookie"
       - "bitcoin:testpassword" # Just for testing, never add a real password here
       - "-v"
