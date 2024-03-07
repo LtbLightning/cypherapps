@@ -2,7 +2,7 @@ version: "3"
 
 services:
   electrs:
-    build: https://github.com/LtbLightning/electrs_docker
+    image: ltbl/electrs:latest
     command:
       - "--network=${NETWORK}"
       - "--address-search"
