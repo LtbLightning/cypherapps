@@ -8,9 +8,9 @@ services:
       - "--address-search"
       - "--jsonrpc-import"
       - "--http-addr"
-      - "0.0.0.0:3002"
+      - "0.0.0.0:3001"
       - "--daemon-rpc-addr"
-      - "bitcoin:18443"
+      - "bitcoin:18332"
       - "--cookie"
       - "bitcoin:testpassword" # Just for testing, never add a real password here
       - "-v"
@@ -40,7 +40,7 @@ services:
       - traefik.http.routers.electrs-onion.middlewares=electrs-stripprefix@docker
       # - traefik.http.routers.electrs-onion.middlewares=electrs-auth@docker
 
-      - traefik.http.services.electrs.loadbalancer.server.port=3002
+      - traefik.http.services.electrs.loadbalancer.server.port=3001
       - traefik.http.services.electrs.loadbalancer.passHostHeader=true
 
       - traefik.http.middlewares.electrs-redirectregex.redirectregex.regex=^(.*)/electrs$$
@@ -67,7 +67,7 @@ services:
         - traefik.http.routers.electrs-onion.middlewares=electrs-stripprefix@docker
         # - traefik.http.routers.electrs-onion.middlewares=electrs-auth@docker
 
-        - traefik.http.services.electrs.loadbalancer.server.port=3002
+        - traefik.http.services.electrs.loadbalancer.server.port=3001
         - traefik.http.services.electrs.loadbalancer.passHostHeader=true
 
         - traefik.http.middlewares.electrs-redirectregex.redirectregex.regex=^(.*)/electrs$$
